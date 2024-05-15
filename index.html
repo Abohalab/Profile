@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title> Hasan Nahlawi </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasan Nahlawi</title>
+        <link  rel="Stylesheet" href="Css/Bildschirm.css">
+        <link rel="Stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+        <link href="css/lightbox.css" rel="stylesheet">
+        <link href="../Css/lightbox2-dev/dist/css/lightbox.css" rel="stylesheet">
+        <link rel="stylesheet" href="jquery-ui-1.13.2 (1)/jquery-ui-1.13.2/jquery-ui.css">
+        <script src="jquery-ui-1.13.2 (1)/jquery-ui-1.13.2/external/jquery/jquery.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <script>
+            $( function() {
+              $( "#accordion" ).accordion();
+            } );
+            </script>
+             <script>
+                $( function() {
+                  $( "#tabs" ).tabs();
+                } );
+                </script>
+    </head>
+
+<body>
+    <header>
+        <img src="Bilder/hh.png" alt="Profilbild von Hasan " class="profile-img" onclick="showContactInfo()">
+     <nav class="navigation">
+        <a href="#Servics">Über mich</a>
+        <a href="#Projekts">Projekts</a>
+        <a href="#contact">Porgramm Sprache</a>   
+     </nav>   
+    </header>
+    
+    <section class="main">
+        
+        <div>
+            <h2> Hello, Click on The image<br><span>Herzlich Willkommen</span></span></h2>
+            <h3> Auf meiner privaten Seite </h3>
+            <a href="#projects" class="main-btn"> View my Work</a>
+            <div class="social-icons">
+            <div>
+             <a href="#"><i class="fa-brands fa-instagram"></i></a> 
+             <a href="#"><i class="fa-brands fa-facebook"></i></a>
+             <a href="#"><i class="fa-brands fa-youtube"></i></a>
+             <a href="#"><i class="fa-brands fa-linkedin"></i></a> 
+            </div> 
+            </div>
+        </div>
+        <section class="map" id="contact">
+            <div class="contact-info" id="contact-info">
+                <p>Name: Hasan </p>
+                <p>Große: 175cm</p>
+               <p>Familienstand: Ledig</p> 
+                <p>Email:haawi@21gmail.com</p>
+            </div>
+            <div id="map"></div>
+        </section>
+        <section class="map" id="contact">
+            <div class="contact-info" id="contact-info">
+                <p>Name: Hasam Nahlawi</p>
+                <p>Telefonnummer: +49 176 </p>
+                <p>Email:hasaahlawi21@gmail.com</p>
+            </div>
+            <div id="map"></div>
+        </section>
+        
+     
+        
+        <script>
+            function showContactInfo() {
+                var contactInfo = document.getElementById("contact-info");
+                if (contactInfo.style.display === "none") {
+                    contactInfo.style.display = "block";
+                } else {
+                    contactInfo.style.display = "none";
+                }
+            }
+            
+            function initMap() {
+                var location = {lat: 51.1657, lng: 10.4515}; // Hier die Koordinaten für Ihren Standort eintragen
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 15,
+                    center: location
+                });
+                var marker = new google.maps.Marker({
+                    position: location,
+                    map: map
+                });
+            }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=Ihr_API_Schlüssel&callback=initMap"></script>
+        
+    </section>
+    <section class="cards" id="Services">
+        <h2 class="title">Wie würde ich mich in Frontend-Sprachen selber bewerten?</h2>
+
+        
+        <div class="content" >
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-brands fa-html5"></i>
+                </div> 
+                    <div class="info">
+            <h3>HtMl5</h3>
+            <p>7 von 10 </p>
+                    </div>
+            </div>
+            <div class="card" >
+                <div class="icon">
+                    <i class="fa-brands fa-js"></i>
+                </div> 
+                    <div class="info">
+            <h3>JS</h3>
+            <p>4 von 10</p>
+                    </div>
+                    
+            </div>
+            <div class="card" >
+                <div class="icon">
+                    <i class="fa-brands fa-css3-alt"></i>
+                </div> 
+                    <div class="info">
+            <h3>css</h3>
+            <p>7 von 10</p>
+                    </div>
+                    
+            </div>
+        </div>
+    </section>
+
+    <section class="Projekts" id="Projekts">
+    <h2 class="title">Bilder von meinen Projekten</h2>
+
+    <div class="content-tabs" id="tabs">
+        <ul>
+            <li><a href="#tabs-1">golden-beach</a></li>
+            <li><a href="#tabs-5">Resturant</a></li>
+            <li><a href="#tabs-2">Motorad</a></li>
+            <li><a href="#tabs-3">Algorithmus</a></li>
+            <li><a href="#tabs-4">Hotel vallora</a></li>
+            
+          </ul>
+        <div class="projekts-card" id="tabs-1">
+            <div class="Bild">
+                <a href="Bilder/Startseite.jpeg" data-lightbox="src/images/close" data-title="My caption">
+                <img src="Bilder/Startseite.jpeg"></a>
+            </div>
+            <div class="prjekts-info">
+                <h3>Info</h3>
+                <p class="projekts-katalog"> Website für eine Hotle beinhaltet alle info eines Hotels </p>
+                <strong class="projekts-title">
+                    <span> Golden beach Hotel</span>
+                    <a href="#" class="More-details"> More details</a>
+                </strong>
+
+            </div>
+        </div>
+        <div class="projekts-card" id="tabs-5">
+            <div class="Bild">
+                <a href="Bilder/GetImage.png" data-lightbox="src/images/close" data-title="My caption">
+                <img src="Bilder/GetImage.png"></a>
+            </div>
+            <div class="prjekts-info">
+                <h3>Info</h3>
+                <p class="projekts-katalog"> Website für eines Resturant </p>
+                <strong class="projekts-title">
+                    <span> Resturant</span>
+                    <a href="#" class="More-details"> More details</a>
+                </strong>
+
+            </div>
+        </div>
+        <div class="projekts-card" id="tabs-2">
+            <div class="Bild">
+                <a href="Bilder/Motorad.jpeg" data-lightbox="src/images/close" data-title="My caption">
+                <img src="Bilder/Motorad.jpeg"></a>
+            </div>
+            <div class="prjekts-info">
+                <p class="projekts-katalog"> Website für eine Hotle beinhaltet alle info eines Hotels </p>
+                <strong class="projekts-title">
+                    <span> Golden beach Hotel</span>
+                    <a href="#" class="More-details"> More details</a>
+                </strong>
+
+            </div>
+        </div>
+        <div class="projekts-card" id="tabs-3">
+            <div class="Bild">
+                <a href="Bilder/Algorithmus.jpeg" data-lightbox="src/images/close" data-title="My caption">
+                <img src="Bilder/Algorithmus.jpeg"></a>
+            </div>
+            <div class="prjekts-info">
+                <p class="projekts-katalog"> Website für eine Hotle beinhaltet alle info eines Hotels </p>
+                <strong class="projekts-title">
+                    <span> Golden beach Hotel</span>
+                    <a href="#" class="More-details"> More details</a>
+                </strong>
+
+            </div>
+        </div>
+        <div class="projekts-card" id="tabs-4">
+            <div class="Bild">
+                <a href="Bilder/Hotel Vallora.jpeg" data-lightbox="src/images/close" data-title="My caption">
+                <img src="Bilder/Hotel Vallora.jpeg"></a>
+            </div>
+            <div class="prjekts-info">
+                <p class="projekts-katalog"> Website für eine Hotle beinhaltet alle info eines Hotels </p>
+                <strong class="projekts-title">
+                    <span> Golden beach Hotel</span>
+                    <a href="#" class="More-details"> More details</a>
+                </strong>
+
+            </div>
+        </div>
+        
+    </div>
+    </section>
+    <footer>
+        <p> Hasan Nahlawi© 2024. Alle Rechte vorbehalten.</p>
+    </footer>
+    
+</body>
+</html>
